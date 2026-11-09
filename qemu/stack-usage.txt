@@ -1,0 +1,28 @@
+ML-KEM-768 peak stack in bytes and instructions executed:
+                                              stack instructions
+  mlkem-otf generate                             72          913
+  mlkem-otf load seed                            76          768
+  mlkem-otf generate into a dropped slot        144         1610
+  mlkem-otf load seed into a dropped slot       156         1285
+  mlkem-otf keygen                             1952      2306305
+  mlkem-otf encapsulation key check             448       430443
+  mlkem-otf seed and key check (bind)          1944      2732654
+  mlkem-otf encapsulate                        2032      2653608
+  mlkem-otf encapsulate, m all 0x00            2032      2653608
+  mlkem-otf encapsulate, m all 0xff            2032      2653608
+  mlkem-otf encapsulate, m all 0x5a            2032      2653608
+  mlkem-otf encapsulate, m all 0x01            2032      2653608
+  mlkem-otf encapsulate with an RNG            2064      2653995
+  mlkem-otf decapsulate                        2648      3463276
+  mlkem-otf decapsulate, byte 0 modified       2648      3463276
+  mlkem-otf decapsulate, byte 700 modified     2648      3463276
+  mlkem-otf decapsulate, byte 1087 modified    2648      3463276
+  mlkem-otf decapsulate, all bytes inverted    2648      3463276
+  ml-kem keygen                               28328      2721486
+  ml-kem encapsulation key check              10020       561057
+  ml-kem encapsulate                          29664      2521668
+  ml-kem decapsulate                          35040      3257333
+
+  ml-kem decapsulation key size                3202
+
+Encapsulation and decapsulation take the same instructions for all inputs.

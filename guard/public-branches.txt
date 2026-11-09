@@ -1,0 +1,138 @@
+# Lines that may branch in the checked functions, since they branch on public data only: loop
+# counters, lengths, the bit width d, the public key and the result of a key check. Lines of
+# src/ are "file: text", or "file:line: text" for a text that the file has more than once. Lines
+# of core and other crates are "path:line" for the pinned toolchain and Cargo.lock. Instructions
+# without a source line (line 0) are "line 0 in" the innermost inlined function. See
+# scripts/ct-guard.sh.
+
+# This crate
+encode.rs: *b = byte;
+encode.rs: [c0, c1, c2] => {
+encode.rs: self.diff | u8::from(self.expected.len() != 0)
+encode.rs: sink.put((b >> 4) as u8);
+encode.rs: while bits >= 8 {
+encode.rs: while bits < d {
+kpke.rs: for &b in &rho.0 {
+kpke.rs: for (k, (v, a)) in (0..8).zip(v.iter().zip(a)) {
+kpke.rs: for (v, byte) in v.0.chunks_exact_mut(8).zip(m) {
+lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+lib.rs: for (a, b) in decode12(t) {
+lib.rs: if bad == 0 {
+lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+ntt.rs: *a = a.wrapping_add(t);
+ntt.rs:80: }
+ntt.rs:87: }
+ntt.rs:95: for block in r.0.chunks_exact_mut(2 * len) {
+ntt.rs:117: for block in r.0.chunks_exact_mut(2 * len) {
+ntt.rs: while len >= 2 {
+ntt.rs: while len <= N / 2 {
+sample.rs: if d < Q && n < N {
+sample.rs: if n.is_multiple_of(2) {
+sample.rs: let mut buf = [0; 24];
+sample.rs: while n < N {
+sample.rs: [b0, b1, b2, b3] => u32::from_le_bytes([b0, b1, b2, b3]),
+sample.rs: for (r, w) in r.0.chunks_exact_mut(8).zip(buf.chunks_exact(4)) {
+# The back-edge of the loop in cbd2, which some builds give the last line of the loop.
+sample.rs: *r = a - b;
+# The results of the key checks in the guard
+guard/src/main.rs: if let Ok(own) = dk.bind(black_box(ek)) {
+guard/src/main.rs: if let Ok(peer) = EncapsulationKey::new(black_box(ek)) {
+
+# core iterators and slices: the end of a loop, a split point, a bounds check or the length of a
+# zip or of chunks
+core/src/array/mod.rs:392
+core/src/cmp.rs:1089
+core/src/cmp.rs:1090
+core/src/intrinsics/mod.rs:478
+core/src/iter/adapters/skip.rs:41
+core/src/iter/adapters/zip.rs:300
+core/src/iter/range.rs:1100
+core/src/iter/traits/collect.rs:323
+core/src/num/uint_macros.rs:3788
+core/src/num/uint_macros.rs:3790
+core/src/ops/index_range.rs:131
+core/src/option.rs:1541
+core/src/option.rs:2137
+core/src/option.rs:2138
+core/src/option.rs:2869
+core/src/slice/index.rs:90
+core/src/slice/index.rs:102
+core/src/slice/index.rs:408
+core/src/slice/index.rs:422
+core/src/slice/index.rs:510
+core/src/slice/index.rs:544
+core/src/slice/index.rs:557
+core/src/slice/iter.rs:1693
+core/src/slice/iter.rs:1903
+core/src/slice/iter.rs:2059
+core/src/slice/iter/macros.rs:25
+core/src/slice/iter/macros.rs:180
+core/src/slice/mod.rs:854
+core/src/slice/mod.rs:1290
+core/src/slice/mod.rs:1966
+core/src/slice/mod.rs:2000
+core/src/slice/mod.rs:2062
+core/src/slice/mod.rs:2118
+core/src/slice/mod.rs:2163
+core/src/slice/mod.rs:2202
+core/src/slice/mod.rs:5597
+# Result::expect on the conversion of a slice to an array, which fails on its length only
+core/src/result.rs:1182
+core/src/result.rs:1183
+core/src/result.rs:1721
+# The length check of a select, and Choice::to_bool, which only bind calls on the result of the
+# key check
+cmov-0.5.4/src/slice.rs:24
+ctutils-0.4.8/src/choice.rs:417
+# zeroize: the end of the loop
+zeroize-1.9.1/src/lib.rs:346
+zeroize-1.9.1/src/lib.rs:360
+
+# SHA-3 and SHAKE: the position in the sponge and the length of the input
+hybrid-array-0.4.15/src/from_fn.rs:49
+sha3-0.12.0/src/utils.rs:13
+shake-0.1.0/src/lib.rs:82
+sponge-cursor-0.1.0/src/lib.rs:81
+sponge-cursor-0.1.0/src/lib.rs:103
+sponge-cursor-0.1.0/src/lib.rs:109
+sponge-cursor-0.1.0/src/lib.rs:131
+sponge-cursor-0.1.0/src/lib.rs:194
+sponge-cursor-0.1.0/src/lib.rs:198
+sponge-cursor-0.1.0/src/lib.rs:220
+sponge-cursor-0.1.0/src/u64_le_utils.rs:44
+
+# Line 0: loop counters, pointers and lengths compared with each other or with constants, the
+# rejection in SampleNTT and the coefficients of the public key
+line 0 in <mlkem_otf::EncapsulationKey>::new
+line 0 in <mlkem_otf::encode::Writer as mlkem_otf::encode::Sink>::put
+line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Compare>
+line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Writer>
+line 0 in mlkem_otf::encode::decode_decompress
+line 0 in mlkem_otf::kpke::decrypt::<mlkem_otf::params::MlKem768, mlkem_otf::kpke::FromSigma>
+line 0 in mlkem_otf::kpke::v_poly::<mlkem_otf::params::MlKem768>
+line 0 in mlkem_otf::ntt::ntt
+line 0 in mlkem_otf::ntt::reduce
+line 0 in mlkem_otf::sample::cbd2
+line 0 in mlkem_otf::sample::sample_ntt_acc
+line 0 in core::intrinsics::unlikely
+line 0 in core::ptr::write_volatile::<i16>
+line 0 in <*mut i16>::add
+line 0 in <[i16]>::split_at_mut_checked
+line 0 in <[i16]>::split_at_checked
+line 0 in <[u8]>::split_at_checked
+line 0 in <[u8]>::split_at_mut_unchecked
+line 0 in <[u8]>::split_at_unchecked
+line 0 in <core::iter::adapters::skip::Skip<core::slice::iter::Iter<i16>> as core::iter::traits::iterator::Iterator>::next
+line 0 in <core::iter::adapters::zip::Zip<core::slice::iter::IterMut<i16>, core::slice::iter::IterMut<i16>> as core::iter::adapters::zip::ZipImpl<core::slice::iter::IterMut<i16>, core::slice::iter::IterMut<i16>>>::next
+line 0 in <core::iter::adapters::zip::Zip<core::slice::iter::IterMut<u8>, core::iter::adapters::zip::Zip<core::slice::iter::ChunksExact<i16>, core::slice::iter::ChunksExact<i16>>> as core::iter::adapters::zip::ZipImpl<core::slice::iter::IterMut<u8>, core::iter::adapters::zip::Zip<core::slice::iter::ChunksExact<i16>, core::slice::iter::ChunksExact<i16>>>>::next
+line 0 in <core::iter::adapters::zip::Zip<core::ops::range::Range<u32>, core::iter::adapters::zip::Zip<core::slice::iter::Iter<i16>, core::slice::iter::Iter<i16>>> as core::iter::adapters::zip::ZipImpl<core::ops::range::Range<u32>, core::iter::adapters::zip::Zip<core::slice::iter::Iter<i16>, core::slice::iter::Iter<i16>>>>::next
+line 0 in <core::ops::index_range::IndexRange>::next_unchecked
+line 0 in <core::ops::range::Range<u8> as core::iter::range::RangeIteratorImpl>::spec_next
+line 0 in <core::ptr::non_null::NonNull<i16> as core::cmp::PartialEq>::eq
+line 0 in <core::slice::iter::ChunksExact<u8>>::new
+line 0 in <core::slice::iter::Iter<&[u8]> as core::iter::traits::iterator::Iterator>::next
+line 0 in <core::slice::iter::Iter<i16> as core::iter::traits::double_ended::DoubleEndedIterator>::next_back
+line 0 in <sponge_cursor::SpongeCursor<168>>::squeeze_inner_u64_le::<25>
+line 0 in <sponge_cursor::SpongeCursor<72>>::absorb_u64_le::<25>
+line 0 in sponge_cursor::u64_le_utils::absorb_full::<25, 72>
+line 0 in sponge_cursor::u64_le_utils::absorb_partial::<25, 168>

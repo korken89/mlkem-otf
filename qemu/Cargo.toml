@@ -1,0 +1,46 @@
+[package]
+name = "measure"
+version = "0.1.0"
+edition = "2024"
+description = "Stack, instructions and code size of ML-KEM-768 on a Cortex-M33 in QEMU"
+license = "MIT OR Apache-2.0"
+publish = false
+default-run = "measure"
+
+[workspace]
+
+[features]
+# The one operation that the text-size binary links
+keygen = []
+ek-check = []
+bind = []
+encapsulate = []
+decapsulate = []
+
+[dependencies]
+cortex-m = "0.7"
+cortex-m-rt = "0.7"
+ml-kem = { version = "0.3", default-features = false, features = ["hazmat"] }
+mlkem-otf = { path = "..", features = ["hazmat"] }
+semihosting = { version = "0.1", features = ["stdio", "panic-handler"] }
+# The RNG of the generated key
+rand_core = "0.10"
+# The secrets that the residue checks look for
+sha3 = { version = "0.12", default-features = false }
+shake = { version = "0.1", default-features = false }
+
+[profile.release]
+codegen-units = 1
+debug = true
+lto = true
+opt-level = "s"
+
+[[bin]]
+name = "measure"
+test = false
+bench = false
+
+[[bin]]
+name = "text-size"
+test = false
+bench = false

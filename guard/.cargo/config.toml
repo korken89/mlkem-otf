@@ -1,0 +1,15 @@
+[build]
+target = "thumbv8m.main-none-eabihf"
+
+[target.thumbv8m.main-none-eabihf]
+rustflags = ["-C", "link-arg=-Tlink.x", "-C", "target-cpu=cortex-m33"]
+
+# The other cores build core from source, see scripts/ct-guard.sh
+[target.thumbv7em-none-eabi]
+rustflags = ["-C", "link-arg=-Tlink.x", "-C", "target-cpu=cortex-m4"]
+
+[target.thumbv7m-none-eabi]
+rustflags = ["-C", "link-arg=-Tlink.x", "-C", "target-cpu=cortex-m3"]
+
+[target.thumbv6m-none-eabi]
+rustflags = ["-C", "link-arg=-Tlink.x", "-C", "target-cpu=cortex-m0"]

@@ -1,0 +1,7 @@
+[toolchain]
+channel = "1.99.1"
+profile = "minimal"
+components = ["rustfmt", "clippy", "rust-analyzer", "rust-src"]
+# The QEMU measurements and the constant-time guard build for a Cortex-M33. The guard builds
+# core from rust-src for the other cores.
+targets = ["thumbv8m.main-none-eabihf"]

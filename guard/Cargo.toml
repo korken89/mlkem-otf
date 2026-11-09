@@ -1,0 +1,29 @@
+[package]
+name = "ct-guard"
+version = "0.1.0"
+edition = "2024"
+description = "Links every operation of mlkem-otf for Cortex-M0, M3, M4 and M33 to check its machine code"
+license = "MIT OR Apache-2.0"
+publish = false
+
+[workspace]
+
+[features]
+# Links with a panic handler, for the optimization levels where unreachable panics remain
+allow-panic = []
+
+[dependencies]
+cortex-m-rt = "0.7"
+mlkem-otf = { path = "..", features = ["hazmat"] }
+rand_core = "0.10"
+
+[profile.release]
+codegen-units = 1
+debug = true
+lto = true
+panic = "abort"
+
+[[bin]]
+name = "ct-guard"
+test = false
+bench = false

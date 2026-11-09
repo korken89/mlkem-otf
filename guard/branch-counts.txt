@@ -1,0 +1,1177 @@
+# cortex-m33 opt-level 2
+   13 core/src/iter/adapters/zip.rs:300
+   20 core/src/iter/range.rs:1100
+    1 core/src/option.rs:2137
+    4 core/src/option.rs:2138
+  103 core/src/slice/iter/macros.rs:180
+    1 core/src/slice/iter/macros.rs:25
+   12 core/src/slice/mod.rs:2163
+    4 core/src/slice/mod.rs:2202
+   16 encode.rs: *b = byte;
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+   31 encode.rs: while bits >= 8 {
+   16 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <core::iter::adapters::zip::Zip<core::slice::iter::IterMut<u8>, core::iter::adapters::zip::Zip<core::slice::iter::ChunksExact<i16>, core::slice::iter::ChunksExact<i16>>> as core::iter::adapters::zip::ZipImpl<core::slice::iter::IterMut<u8>, core::iter::adapters::zip::Zip<core::slice::iter::ChunksExact<i16>, core::slice::iter::ChunksExact<i16>>>>::next
+    1 line 0 in core::intrinsics::unlikely
+    5 line 0 in core::ptr::write_volatile::<i16>
+    1 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Compare>
+    2 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Writer>
+    1 line 0 in mlkem_otf::sample::cbd2
+    1 ntt.rs: while len <= N / 2 {
+    1 ntt.rs: while len >= 2 {
+    4 sample.rs: if d < Q && n < N {
+    2 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    6 sha3-0.12.0/src/utils.rs:13
+    2 shake-0.1.0/src/lib.rs:82
+    1 sponge-cursor-0.1.0/src/lib.rs:103
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    1 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+# cortex-m33 opt-level 3
+   21 core/src/iter/adapters/zip.rs:300
+   21 core/src/iter/range.rs:1100
+   13 core/src/option.rs:2138
+  112 core/src/slice/iter/macros.rs:180
+   16 core/src/slice/iter/macros.rs:25
+   25 core/src/slice/mod.rs:2163
+    7 core/src/slice/mod.rs:2202
+   16 encode.rs: *b = byte;
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+   43 encode.rs: while bits >= 8 {
+    1 kpke.rs: for &b in &rho.0 {
+   16 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    2 line 0 in <*mut i16>::add
+    1 line 0 in <core::slice::iter::ChunksExact<u8>>::new
+   30 line 0 in <mlkem_otf::encode::Writer as mlkem_otf::encode::Sink>::put
+    6 line 0 in core::ptr::write_volatile::<i16>
+    1 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Compare>
+    2 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Writer>
+    1 line 0 in mlkem_otf::kpke::decrypt::<mlkem_otf::params::MlKem768, mlkem_otf::kpke::FromSigma>
+    6 ntt.rs: *a = a.wrapping_add(t);
+    4 sample.rs: if d < Q && n < N {
+    2 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    6 sha3-0.12.0/src/utils.rs:13
+    2 shake-0.1.0/src/lib.rs:82
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    2 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+# cortex-m33 opt-level s
+   13 core/src/iter/adapters/zip.rs:300
+   15 core/src/iter/range.rs:1100
+    1 core/src/ops/index_range.rs:131
+    1 core/src/option.rs:2138
+   74 core/src/slice/iter/macros.rs:180
+    1 core/src/slice/iter/macros.rs:25
+    7 core/src/slice/mod.rs:2163
+    4 core/src/slice/mod.rs:2202
+    1 encode.rs: *b = byte;
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+    2 encode.rs: while bits < d {
+    4 encode.rs: while bits >= 8 {
+    2 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <[u8]>::split_at_checked
+    1 line 0 in <core::iter::adapters::skip::Skip<core::slice::iter::Iter<i16>> as core::iter::traits::iterator::Iterator>::next
+    1 line 0 in <sponge_cursor::SpongeCursor<72>>::absorb_u64_le::<25>
+    1 line 0 in core::intrinsics::unlikely
+    1 line 0 in mlkem_otf::ntt::ntt
+    1 line 0 in sponge_cursor::u64_le_utils::absorb_full::<25, 72>
+    1 line 0 in sponge_cursor::u64_le_utils::absorb_partial::<25, 168>
+    1 ntt.rs: while len <= N / 2 {
+    2 sample.rs: if d < Q && n < N {
+    1 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: let mut buf = [0; 24];
+    1 sample.rs: while n < N {
+    4 sha3-0.12.0/src/utils.rs:13
+    4 shake-0.1.0/src/lib.rs:82
+    2 sponge-cursor-0.1.0/src/lib.rs:103
+    2 sponge-cursor-0.1.0/src/lib.rs:109
+    1 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+# cortex-m33 opt-level z
+    1 core/src/array/mod.rs:392
+    9 core/src/cmp.rs:1089
+    1 core/src/intrinsics/mod.rs:478
+   11 core/src/iter/adapters/zip.rs:300
+   11 core/src/iter/range.rs:1100
+    1 core/src/num/uint_macros.rs:3788
+    1 core/src/num/uint_macros.rs:3790
+    1 core/src/ops/index_range.rs:131
+    2 core/src/option.rs:2138
+    1 core/src/option.rs:2869
+    1 core/src/result.rs:1183
+    1 core/src/slice/index.rs:102
+    2 core/src/slice/index.rs:408
+    1 core/src/slice/index.rs:510
+    1 core/src/slice/index.rs:90
+    1 core/src/slice/iter.rs:1693
+    1 core/src/slice/iter.rs:1903
+    1 core/src/slice/iter.rs:2059
+   21 core/src/slice/iter/macros.rs:180
+    1 core/src/slice/mod.rs:1290
+    1 core/src/slice/mod.rs:1966
+    1 core/src/slice/mod.rs:2000
+    1 core/src/slice/mod.rs:2062
+    1 core/src/slice/mod.rs:2118
+    7 core/src/slice/mod.rs:2163
+    2 core/src/slice/mod.rs:2202
+    1 core/src/slice/mod.rs:5597
+    1 encode.rs: *b = byte;
+    1 encode.rs: [c0, c1, c2] => {
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+    1 encode.rs: while bits < d {
+    2 encode.rs: while bits >= 8 {
+    1 hybrid-array-0.4.15/src/from_fn.rs:49
+    2 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: for (a, b) in decode12(t) {
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <core::iter::adapters::skip::Skip<core::slice::iter::Iter<i16>> as core::iter::traits::iterator::Iterator>::next
+    1 ntt.rs: while len <= N / 2 {
+    1 ntt.rs: while len >= 2 {
+    1 ntt.rs:87: }
+    2 sample.rs: if d < Q && n < N {
+    1 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    1 sponge-cursor-0.1.0/src/lib.rs:103
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    1 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+    1 sponge-cursor-0.1.0/src/lib.rs:81
+    3 sponge-cursor-0.1.0/src/u64_le_utils.rs:44
+    2 zeroize-1.9.1/src/lib.rs:346
+    1 zeroize-1.9.1/src/lib.rs:360
+# cortex-m33 opt-level 2-overflow
+   13 core/src/iter/adapters/zip.rs:300
+   20 core/src/iter/range.rs:1100
+    1 core/src/option.rs:2137
+    4 core/src/option.rs:2138
+  102 core/src/slice/iter/macros.rs:180
+    1 core/src/slice/iter/macros.rs:25
+   12 core/src/slice/mod.rs:2163
+    4 core/src/slice/mod.rs:2202
+   16 encode.rs: *b = byte;
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+   31 encode.rs: while bits >= 8 {
+   16 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <core::iter::adapters::zip::Zip<core::slice::iter::IterMut<u8>, core::iter::adapters::zip::Zip<core::slice::iter::ChunksExact<i16>, core::slice::iter::ChunksExact<i16>>> as core::iter::adapters::zip::ZipImpl<core::slice::iter::IterMut<u8>, core::iter::adapters::zip::Zip<core::slice::iter::ChunksExact<i16>, core::slice::iter::ChunksExact<i16>>>>::next
+    1 line 0 in <sponge_cursor::SpongeCursor<72>>::absorb_u64_le::<25>
+    1 line 0 in core::intrinsics::unlikely
+    5 line 0 in core::ptr::write_volatile::<i16>
+    1 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Compare>
+    2 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Writer>
+    1 line 0 in mlkem_otf::encode::decode_decompress
+    1 ntt.rs: while len <= N / 2 {
+    1 ntt.rs: while len >= 2 {
+    1 sample.rs: *r = a - b;
+    4 sample.rs: if d < Q && n < N {
+    2 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    6 sha3-0.12.0/src/utils.rs:13
+    2 shake-0.1.0/src/lib.rs:82
+    1 sponge-cursor-0.1.0/src/lib.rs:103
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+# cortex-m33 opt-level 3-overflow
+   21 core/src/iter/adapters/zip.rs:300
+   21 core/src/iter/range.rs:1100
+   13 core/src/option.rs:2138
+  111 core/src/slice/iter/macros.rs:180
+   16 core/src/slice/iter/macros.rs:25
+   25 core/src/slice/mod.rs:2163
+    7 core/src/slice/mod.rs:2202
+   16 encode.rs: *b = byte;
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+   43 encode.rs: while bits >= 8 {
+    1 kpke.rs: for &b in &rho.0 {
+   16 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    2 line 0 in <*mut i16>::add
+    1 line 0 in <core::slice::iter::ChunksExact<u8>>::new
+   30 line 0 in <mlkem_otf::encode::Writer as mlkem_otf::encode::Sink>::put
+    6 line 0 in core::ptr::write_volatile::<i16>
+    1 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Compare>
+    2 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Writer>
+    1 line 0 in mlkem_otf::encode::decode_decompress
+    1 line 0 in mlkem_otf::kpke::decrypt::<mlkem_otf::params::MlKem768, mlkem_otf::kpke::FromSigma>
+    6 ntt.rs: *a = a.wrapping_add(t);
+    4 sample.rs: if d < Q && n < N {
+    2 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    6 sha3-0.12.0/src/utils.rs:13
+    2 shake-0.1.0/src/lib.rs:82
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    2 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+# cortex-m33 opt-level s-overflow
+   13 core/src/iter/adapters/zip.rs:300
+   15 core/src/iter/range.rs:1100
+    1 core/src/ops/index_range.rs:131
+    1 core/src/option.rs:2138
+   74 core/src/slice/iter/macros.rs:180
+    1 core/src/slice/iter/macros.rs:25
+    7 core/src/slice/mod.rs:2163
+    4 core/src/slice/mod.rs:2202
+    1 encode.rs: *b = byte;
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+    1 encode.rs: while bits < d {
+    4 encode.rs: while bits >= 8 {
+    2 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <[u8]>::split_at_checked
+    1 line 0 in <core::iter::adapters::skip::Skip<core::slice::iter::Iter<i16>> as core::iter::traits::iterator::Iterator>::next
+    1 line 0 in <sponge_cursor::SpongeCursor<72>>::absorb_u64_le::<25>
+    1 line 0 in core::intrinsics::unlikely
+    1 line 0 in mlkem_otf::ntt::ntt
+    1 line 0 in sponge_cursor::u64_le_utils::absorb_full::<25, 72>
+    1 line 0 in sponge_cursor::u64_le_utils::absorb_partial::<25, 168>
+    1 ntt.rs: while len <= N / 2 {
+    2 sample.rs: if d < Q && n < N {
+    1 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: let mut buf = [0; 24];
+    1 sample.rs: while n < N {
+    4 sha3-0.12.0/src/utils.rs:13
+    4 shake-0.1.0/src/lib.rs:82
+    2 sponge-cursor-0.1.0/src/lib.rs:103
+    2 sponge-cursor-0.1.0/src/lib.rs:109
+    1 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+# cortex-m33 opt-level s-split
+    1 cmov-0.5.4/src/slice.rs:24
+    4 core/src/cmp.rs:1089
+   17 core/src/iter/adapters/zip.rs:300
+   14 core/src/iter/range.rs:1100
+    1 core/src/ops/index_range.rs:131
+    1 core/src/option.rs:2138
+    4 core/src/slice/iter.rs:1903
+    1 core/src/slice/iter.rs:2059
+   58 core/src/slice/iter/macros.rs:180
+    4 core/src/slice/iter/macros.rs:25
+    9 core/src/slice/mod.rs:2163
+    4 core/src/slice/mod.rs:2202
+    1 core/src/slice/mod.rs:5597
+    1 core/src/slice/mod.rs:854
+    1 ctutils-0.4.8/src/choice.rs:417
+    2 encode.rs: *b = byte;
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+    1 encode.rs: sink.put((b >> 4) as u8);
+    2 encode.rs: while bits < d {
+    4 encode.rs: while bits >= 8 {
+    1 guard/src/main.rs: if let Ok(own) = dk.bind(black_box(ek)) {
+    1 guard/src/main.rs: if let Ok(peer) = EncapsulationKey::new(black_box(ek)) {
+    2 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <core::iter::adapters::skip::Skip<core::slice::iter::Iter<i16>> as core::iter::traits::iterator::Iterator>::next
+    2 line 0 in <core::iter::adapters::zip::Zip<core::ops::range::Range<u32>, core::iter::adapters::zip::Zip<core::slice::iter::Iter<i16>, core::slice::iter::Iter<i16>>> as core::iter::adapters::zip::ZipImpl<core::ops::range::Range<u32>, core::iter::adapters::zip::Zip<core::slice::iter::Iter<i16>, core::slice::iter::Iter<i16>>>>::next
+    1 line 0 in core::intrinsics::unlikely
+    4 line 0 in core::ptr::write_volatile::<i16>
+    1 line 0 in mlkem_otf::ntt::ntt
+    1 line 0 in mlkem_otf::ntt::reduce
+    1 line 0 in mlkem_otf::sample::cbd2
+    1 ntt.rs: while len <= N / 2 {
+    1 sample.rs: [b0, b1, b2, b3] => u32::from_le_bytes([b0, b1, b2, b3]),
+    1 sample.rs: for (r, w) in r.0.chunks_exact_mut(8).zip(buf.chunks_exact(4)) {
+    2 sample.rs: if d < Q && n < N {
+    1 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    2 shake-0.1.0/src/lib.rs:82
+    1 sponge-cursor-0.1.0/src/lib.rs:103
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    1 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+# cortex-m4 opt-level 2
+    1 core/src/intrinsics/mod.rs:478
+   13 core/src/iter/adapters/zip.rs:300
+   20 core/src/iter/range.rs:1100
+    1 core/src/option.rs:2137
+    4 core/src/option.rs:2138
+  103 core/src/slice/iter/macros.rs:180
+    1 core/src/slice/iter/macros.rs:25
+   12 core/src/slice/mod.rs:2163
+    4 core/src/slice/mod.rs:2202
+   16 encode.rs: *b = byte;
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+   31 encode.rs: while bits >= 8 {
+   16 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <core::iter::adapters::zip::Zip<core::slice::iter::IterMut<u8>, core::iter::adapters::zip::Zip<core::slice::iter::ChunksExact<i16>, core::slice::iter::ChunksExact<i16>>> as core::iter::adapters::zip::ZipImpl<core::slice::iter::IterMut<u8>, core::iter::adapters::zip::Zip<core::slice::iter::ChunksExact<i16>, core::slice::iter::ChunksExact<i16>>>>::next
+    5 line 0 in core::ptr::write_volatile::<i16>
+    1 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Compare>
+    2 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Writer>
+    1 line 0 in mlkem_otf::sample::cbd2
+    1 ntt.rs: while len <= N / 2 {
+    1 ntt.rs: while len >= 2 {
+    4 sample.rs: if d < Q && n < N {
+    2 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    6 sha3-0.12.0/src/utils.rs:13
+    2 shake-0.1.0/src/lib.rs:82
+    1 sponge-cursor-0.1.0/src/lib.rs:103
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    1 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+# cortex-m4 opt-level 3
+   21 core/src/iter/adapters/zip.rs:300
+   21 core/src/iter/range.rs:1100
+   16 core/src/option.rs:2138
+  110 core/src/slice/iter/macros.rs:180
+   16 core/src/slice/iter/macros.rs:25
+   25 core/src/slice/mod.rs:2163
+    5 core/src/slice/mod.rs:2202
+   16 encode.rs: *b = byte;
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+   43 encode.rs: while bits >= 8 {
+    1 kpke.rs: for &b in &rho.0 {
+   16 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <*mut i16>::add
+    1 line 0 in <core::slice::iter::ChunksExact<u8>>::new
+   30 line 0 in <mlkem_otf::encode::Writer as mlkem_otf::encode::Sink>::put
+    6 line 0 in core::ptr::write_volatile::<i16>
+    1 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Compare>
+    2 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Writer>
+    1 line 0 in mlkem_otf::kpke::decrypt::<mlkem_otf::params::MlKem768, mlkem_otf::kpke::FromSigma>
+    2 line 0 in mlkem_otf::ntt::ntt
+    6 ntt.rs: *a = a.wrapping_add(t);
+    4 sample.rs: if d < Q && n < N {
+    2 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    6 sha3-0.12.0/src/utils.rs:13
+    2 shake-0.1.0/src/lib.rs:82
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    2 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+# cortex-m4 opt-level s
+    1 core/src/iter/adapters/skip.rs:41
+   13 core/src/iter/adapters/zip.rs:300
+   15 core/src/iter/range.rs:1100
+    1 core/src/ops/index_range.rs:131
+    1 core/src/option.rs:2138
+   74 core/src/slice/iter/macros.rs:180
+    1 core/src/slice/iter/macros.rs:25
+    7 core/src/slice/mod.rs:2163
+    4 core/src/slice/mod.rs:2202
+    1 encode.rs: *b = byte;
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+    2 encode.rs: while bits < d {
+    4 encode.rs: while bits >= 8 {
+    2 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <[u8]>::split_at_checked
+    1 line 0 in <core::iter::adapters::skip::Skip<core::slice::iter::Iter<i16>> as core::iter::traits::iterator::Iterator>::next
+    1 line 0 in <sponge_cursor::SpongeCursor<72>>::absorb_u64_le::<25>
+    1 line 0 in mlkem_otf::ntt::ntt
+    1 line 0 in sponge_cursor::u64_le_utils::absorb_full::<25, 72>
+    1 line 0 in sponge_cursor::u64_le_utils::absorb_partial::<25, 168>
+    1 ntt.rs: while len <= N / 2 {
+    2 sample.rs: if d < Q && n < N {
+    1 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: let mut buf = [0; 24];
+    1 sample.rs: while n < N {
+    4 sha3-0.12.0/src/utils.rs:13
+    4 shake-0.1.0/src/lib.rs:82
+    2 sponge-cursor-0.1.0/src/lib.rs:103
+    2 sponge-cursor-0.1.0/src/lib.rs:109
+    1 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+# cortex-m4 opt-level z
+    1 core/src/array/mod.rs:392
+    8 core/src/cmp.rs:1090
+    1 core/src/iter/adapters/skip.rs:41
+   11 core/src/iter/adapters/zip.rs:300
+   11 core/src/iter/range.rs:1100
+    2 core/src/iter/traits/collect.rs:323
+    1 core/src/num/uint_macros.rs:3788
+    1 core/src/num/uint_macros.rs:3790
+    1 core/src/ops/index_range.rs:131
+    2 core/src/option.rs:2138
+    1 core/src/option.rs:2869
+    1 core/src/result.rs:1183
+    1 core/src/slice/index.rs:102
+    2 core/src/slice/index.rs:408
+    1 core/src/slice/index.rs:510
+    1 core/src/slice/index.rs:90
+    1 core/src/slice/iter.rs:1693
+    1 core/src/slice/iter.rs:1903
+   21 core/src/slice/iter/macros.rs:180
+    1 core/src/slice/mod.rs:1290
+    7 core/src/slice/mod.rs:2163
+    6 core/src/slice/mod.rs:2202
+    1 core/src/slice/mod.rs:5597
+    1 encode.rs: *b = byte;
+    1 encode.rs: [c0, c1, c2] => {
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+    1 encode.rs: while bits < d {
+    2 encode.rs: while bits >= 8 {
+    1 hybrid-array-0.4.15/src/from_fn.rs:49
+    2 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: for (a, b) in decode12(t) {
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <core::iter::adapters::skip::Skip<core::slice::iter::Iter<i16>> as core::iter::traits::iterator::Iterator>::next
+    1 ntt.rs: while len <= N / 2 {
+    1 ntt.rs: while len >= 2 {
+    1 ntt.rs:87: }
+    2 sample.rs: if d < Q && n < N {
+    1 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    1 sponge-cursor-0.1.0/src/lib.rs:103
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    1 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+    1 sponge-cursor-0.1.0/src/lib.rs:81
+    3 sponge-cursor-0.1.0/src/u64_le_utils.rs:44
+    2 zeroize-1.9.1/src/lib.rs:346
+    1 zeroize-1.9.1/src/lib.rs:360
+# cortex-m4 opt-level 2-overflow
+    1 core/src/intrinsics/mod.rs:478
+   15 core/src/iter/adapters/zip.rs:300
+   20 core/src/iter/range.rs:1100
+    1 core/src/option.rs:2137
+    4 core/src/option.rs:2138
+  105 core/src/slice/iter/macros.rs:180
+    1 core/src/slice/iter/macros.rs:25
+   12 core/src/slice/mod.rs:2163
+    4 core/src/slice/mod.rs:2202
+   16 encode.rs: *b = byte;
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+   31 encode.rs: while bits >= 8 {
+    1 kpke.rs: for (k, (v, a)) in (0..8).zip(v.iter().zip(a)) {
+   16 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <sponge_cursor::SpongeCursor<72>>::absorb_u64_le::<25>
+    2 line 0 in core::ptr::write_volatile::<i16>
+    1 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Compare>
+    2 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Writer>
+    1 line 0 in mlkem_otf::encode::decode_decompress
+    1 ntt.rs: while len <= N / 2 {
+    1 ntt.rs: while len >= 2 {
+    1 sample.rs: *r = a - b;
+    4 sample.rs: if d < Q && n < N {
+    2 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    6 sha3-0.12.0/src/utils.rs:13
+    2 shake-0.1.0/src/lib.rs:82
+    1 sponge-cursor-0.1.0/src/lib.rs:103
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+# cortex-m4 opt-level 3-overflow
+   24 core/src/iter/adapters/zip.rs:300
+   21 core/src/iter/range.rs:1100
+   16 core/src/option.rs:2138
+  112 core/src/slice/iter/macros.rs:180
+   16 core/src/slice/iter/macros.rs:25
+   25 core/src/slice/mod.rs:2163
+    5 core/src/slice/mod.rs:2202
+   16 encode.rs: *b = byte;
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+   43 encode.rs: while bits >= 8 {
+    1 kpke.rs: for &b in &rho.0 {
+    2 kpke.rs: for (k, (v, a)) in (0..8).zip(v.iter().zip(a)) {
+   16 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <*mut i16>::add
+    1 line 0 in <core::slice::iter::ChunksExact<u8>>::new
+   30 line 0 in <mlkem_otf::encode::Writer as mlkem_otf::encode::Sink>::put
+    3 line 0 in core::ptr::write_volatile::<i16>
+    1 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Compare>
+    2 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Writer>
+    1 line 0 in mlkem_otf::encode::decode_decompress
+    2 line 0 in mlkem_otf::ntt::ntt
+    6 ntt.rs: *a = a.wrapping_add(t);
+    4 sample.rs: if d < Q && n < N {
+    2 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    6 sha3-0.12.0/src/utils.rs:13
+    2 shake-0.1.0/src/lib.rs:82
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    2 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+# cortex-m4 opt-level s-overflow
+    1 core/src/iter/adapters/skip.rs:41
+   13 core/src/iter/adapters/zip.rs:300
+   15 core/src/iter/range.rs:1100
+    1 core/src/ops/index_range.rs:131
+    1 core/src/option.rs:2138
+   74 core/src/slice/iter/macros.rs:180
+    1 core/src/slice/iter/macros.rs:25
+    7 core/src/slice/mod.rs:2163
+    4 core/src/slice/mod.rs:2202
+    1 encode.rs: *b = byte;
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+    1 encode.rs: while bits < d {
+    4 encode.rs: while bits >= 8 {
+    1 kpke.rs: for (k, (v, a)) in (0..8).zip(v.iter().zip(a)) {
+    2 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <[u8]>::split_at_checked
+    1 line 0 in <core::iter::adapters::skip::Skip<core::slice::iter::Iter<i16>> as core::iter::traits::iterator::Iterator>::next
+    1 line 0 in <sponge_cursor::SpongeCursor<72>>::absorb_u64_le::<25>
+    1 line 0 in mlkem_otf::ntt::ntt
+    1 line 0 in sponge_cursor::u64_le_utils::absorb_full::<25, 72>
+    1 line 0 in sponge_cursor::u64_le_utils::absorb_partial::<25, 168>
+    1 ntt.rs: while len <= N / 2 {
+    2 sample.rs: if d < Q && n < N {
+    1 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: let mut buf = [0; 24];
+    1 sample.rs: while n < N {
+    4 sha3-0.12.0/src/utils.rs:13
+    4 shake-0.1.0/src/lib.rs:82
+    2 sponge-cursor-0.1.0/src/lib.rs:103
+    2 sponge-cursor-0.1.0/src/lib.rs:109
+    1 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+# cortex-m4 opt-level s-split
+    1 cmov-0.5.4/src/slice.rs:24
+    6 core/src/cmp.rs:1090
+    1 core/src/iter/adapters/skip.rs:41
+   20 core/src/iter/adapters/zip.rs:300
+   13 core/src/iter/range.rs:1100
+    1 core/src/ops/index_range.rs:131
+    1 core/src/option.rs:2138
+    1 core/src/result.rs:1721
+    4 core/src/slice/iter.rs:1903
+    2 core/src/slice/iter.rs:2059
+   60 core/src/slice/iter/macros.rs:180
+    4 core/src/slice/iter/macros.rs:25
+    8 core/src/slice/mod.rs:2163
+    4 core/src/slice/mod.rs:2202
+    1 core/src/slice/mod.rs:5597
+    1 ctutils-0.4.8/src/choice.rs:417
+    2 encode.rs: *b = byte;
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+    1 encode.rs: sink.put((b >> 4) as u8);
+    2 encode.rs: while bits < d {
+    4 encode.rs: while bits >= 8 {
+    1 guard/src/main.rs: if let Ok(own) = dk.bind(black_box(ek)) {
+    1 guard/src/main.rs: if let Ok(peer) = EncapsulationKey::new(black_box(ek)) {
+    2 kpke.rs: for (v, byte) in v.0.chunks_exact_mut(8).zip(m) {
+    2 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <[i16]>::split_at_checked
+    1 line 0 in <[u8]>::split_at_unchecked
+    1 line 0 in <core::iter::adapters::skip::Skip<core::slice::iter::Iter<i16>> as core::iter::traits::iterator::Iterator>::next
+    1 line 0 in <core::iter::adapters::zip::Zip<core::ops::range::Range<u32>, core::iter::adapters::zip::Zip<core::slice::iter::Iter<i16>, core::slice::iter::Iter<i16>>> as core::iter::adapters::zip::ZipImpl<core::ops::range::Range<u32>, core::iter::adapters::zip::Zip<core::slice::iter::Iter<i16>, core::slice::iter::Iter<i16>>>>::next
+    1 line 0 in <core::ops::index_range::IndexRange>::next_unchecked
+    3 line 0 in core::ptr::write_volatile::<i16>
+    1 line 0 in mlkem_otf::kpke::v_poly::<mlkem_otf::params::MlKem768>
+    1 line 0 in mlkem_otf::ntt::ntt
+    1 line 0 in mlkem_otf::sample::cbd2
+    1 ntt.rs: while len <= N / 2 {
+    1 sample.rs: [b0, b1, b2, b3] => u32::from_le_bytes([b0, b1, b2, b3]),
+    1 sample.rs: for (r, w) in r.0.chunks_exact_mut(8).zip(buf.chunks_exact(4)) {
+    1 sample.rs: if d < Q && n < N {
+    1 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    2 shake-0.1.0/src/lib.rs:82
+    1 sponge-cursor-0.1.0/src/lib.rs:103
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    1 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+# cortex-m3 opt-level 2
+    1 core/src/intrinsics/mod.rs:478
+   13 core/src/iter/adapters/zip.rs:300
+   20 core/src/iter/range.rs:1100
+    1 core/src/option.rs:2137
+    5 core/src/option.rs:2138
+  103 core/src/slice/iter/macros.rs:180
+   12 core/src/slice/mod.rs:2163
+    4 core/src/slice/mod.rs:2202
+   16 encode.rs: *b = byte;
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+   31 encode.rs: while bits >= 8 {
+   16 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <core::iter::adapters::zip::Zip<core::slice::iter::IterMut<u8>, core::iter::adapters::zip::Zip<core::slice::iter::ChunksExact<i16>, core::slice::iter::ChunksExact<i16>>> as core::iter::adapters::zip::ZipImpl<core::slice::iter::IterMut<u8>, core::iter::adapters::zip::Zip<core::slice::iter::ChunksExact<i16>, core::slice::iter::ChunksExact<i16>>>>::next
+    5 line 0 in core::ptr::write_volatile::<i16>
+    1 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Compare>
+    2 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Writer>
+    1 line 0 in mlkem_otf::sample::cbd2
+    1 ntt.rs: while len <= N / 2 {
+    1 ntt.rs: while len >= 2 {
+    4 sample.rs: if d < Q && n < N {
+    2 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    6 sha3-0.12.0/src/utils.rs:13
+    2 shake-0.1.0/src/lib.rs:82
+    1 sponge-cursor-0.1.0/src/lib.rs:103
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    1 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+# cortex-m3 opt-level 3
+   21 core/src/iter/adapters/zip.rs:300
+   21 core/src/iter/range.rs:1100
+   31 core/src/option.rs:2138
+  110 core/src/slice/iter/macros.rs:180
+    2 core/src/slice/iter/macros.rs:25
+   25 core/src/slice/mod.rs:2163
+    5 core/src/slice/mod.rs:2202
+   16 encode.rs: *b = byte;
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+   43 encode.rs: while bits >= 8 {
+    1 kpke.rs: for &b in &rho.0 {
+   16 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <core::slice::iter::ChunksExact<u8>>::new
+   30 line 0 in <mlkem_otf::encode::Writer as mlkem_otf::encode::Sink>::put
+    6 line 0 in core::ptr::write_volatile::<i16>
+    1 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Compare>
+    2 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Writer>
+    1 line 0 in mlkem_otf::kpke::decrypt::<mlkem_otf::params::MlKem768, mlkem_otf::kpke::FromSigma>
+    2 line 0 in mlkem_otf::ntt::ntt
+    6 ntt.rs: *a = a.wrapping_add(t);
+    4 sample.rs: if d < Q && n < N {
+    2 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    6 sha3-0.12.0/src/utils.rs:13
+    2 shake-0.1.0/src/lib.rs:82
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    2 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+# cortex-m3 opt-level s
+    1 core/src/iter/adapters/skip.rs:41
+   13 core/src/iter/adapters/zip.rs:300
+   15 core/src/iter/range.rs:1100
+    1 core/src/ops/index_range.rs:131
+    1 core/src/option.rs:2138
+   74 core/src/slice/iter/macros.rs:180
+    1 core/src/slice/iter/macros.rs:25
+    7 core/src/slice/mod.rs:2163
+    4 core/src/slice/mod.rs:2202
+    1 encode.rs: *b = byte;
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+    2 encode.rs: while bits < d {
+    4 encode.rs: while bits >= 8 {
+    2 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <[u8]>::split_at_checked
+    1 line 0 in <core::iter::adapters::skip::Skip<core::slice::iter::Iter<i16>> as core::iter::traits::iterator::Iterator>::next
+    1 line 0 in <sponge_cursor::SpongeCursor<72>>::absorb_u64_le::<25>
+    1 line 0 in mlkem_otf::ntt::ntt
+    1 line 0 in sponge_cursor::u64_le_utils::absorb_full::<25, 72>
+    1 line 0 in sponge_cursor::u64_le_utils::absorb_partial::<25, 168>
+    1 ntt.rs: while len <= N / 2 {
+    2 sample.rs: if d < Q && n < N {
+    1 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: let mut buf = [0; 24];
+    1 sample.rs: while n < N {
+    4 sha3-0.12.0/src/utils.rs:13
+    4 shake-0.1.0/src/lib.rs:82
+    2 sponge-cursor-0.1.0/src/lib.rs:103
+    2 sponge-cursor-0.1.0/src/lib.rs:109
+    1 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+# cortex-m3 opt-level z
+    1 core/src/array/mod.rs:392
+    8 core/src/cmp.rs:1090
+    1 core/src/iter/adapters/skip.rs:41
+   11 core/src/iter/adapters/zip.rs:300
+   11 core/src/iter/range.rs:1100
+    2 core/src/iter/traits/collect.rs:323
+    1 core/src/num/uint_macros.rs:3788
+    1 core/src/num/uint_macros.rs:3790
+    1 core/src/ops/index_range.rs:131
+    2 core/src/option.rs:2138
+    1 core/src/option.rs:2869
+    1 core/src/result.rs:1183
+    1 core/src/slice/index.rs:102
+    2 core/src/slice/index.rs:408
+    1 core/src/slice/index.rs:510
+    1 core/src/slice/index.rs:90
+    1 core/src/slice/iter.rs:1693
+    1 core/src/slice/iter.rs:1903
+   20 core/src/slice/iter/macros.rs:180
+    1 core/src/slice/mod.rs:1290
+    7 core/src/slice/mod.rs:2163
+    6 core/src/slice/mod.rs:2202
+    1 core/src/slice/mod.rs:5597
+    1 encode.rs: *b = byte;
+    1 encode.rs: [c0, c1, c2] => {
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+    1 encode.rs: while bits < d {
+    2 encode.rs: while bits >= 8 {
+    1 hybrid-array-0.4.15/src/from_fn.rs:49
+    2 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: for (a, b) in decode12(t) {
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <core::iter::adapters::skip::Skip<core::slice::iter::Iter<i16>> as core::iter::traits::iterator::Iterator>::next
+    1 ntt.rs: while len <= N / 2 {
+    1 ntt.rs: while len >= 2 {
+    1 ntt.rs:80: }
+    1 ntt.rs:87: }
+    2 sample.rs: if d < Q && n < N {
+    1 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    1 sponge-cursor-0.1.0/src/lib.rs:103
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    1 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+    1 sponge-cursor-0.1.0/src/lib.rs:81
+    3 sponge-cursor-0.1.0/src/u64_le_utils.rs:44
+    2 zeroize-1.9.1/src/lib.rs:346
+    1 zeroize-1.9.1/src/lib.rs:360
+# cortex-m3 opt-level 2-overflow
+    1 core/src/intrinsics/mod.rs:478
+   15 core/src/iter/adapters/zip.rs:300
+   20 core/src/iter/range.rs:1100
+    1 core/src/option.rs:2137
+    5 core/src/option.rs:2138
+  105 core/src/slice/iter/macros.rs:180
+   12 core/src/slice/mod.rs:2163
+    4 core/src/slice/mod.rs:2202
+   16 encode.rs: *b = byte;
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+   31 encode.rs: while bits >= 8 {
+    1 kpke.rs: for (k, (v, a)) in (0..8).zip(v.iter().zip(a)) {
+   16 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <sponge_cursor::SpongeCursor<72>>::absorb_u64_le::<25>
+    2 line 0 in core::ptr::write_volatile::<i16>
+    1 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Compare>
+    2 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Writer>
+    1 line 0 in mlkem_otf::encode::decode_decompress
+    1 ntt.rs: while len <= N / 2 {
+    1 ntt.rs: while len >= 2 {
+    1 sample.rs: *r = a - b;
+    4 sample.rs: if d < Q && n < N {
+    2 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    6 sha3-0.12.0/src/utils.rs:13
+    2 shake-0.1.0/src/lib.rs:82
+    1 sponge-cursor-0.1.0/src/lib.rs:103
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+# cortex-m3 opt-level 3-overflow
+   24 core/src/iter/adapters/zip.rs:300
+   21 core/src/iter/range.rs:1100
+   31 core/src/option.rs:2138
+  112 core/src/slice/iter/macros.rs:180
+    2 core/src/slice/iter/macros.rs:25
+   25 core/src/slice/mod.rs:2163
+    5 core/src/slice/mod.rs:2202
+   16 encode.rs: *b = byte;
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+   43 encode.rs: while bits >= 8 {
+    1 kpke.rs: for &b in &rho.0 {
+    2 kpke.rs: for (k, (v, a)) in (0..8).zip(v.iter().zip(a)) {
+   16 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <core::slice::iter::ChunksExact<u8>>::new
+   30 line 0 in <mlkem_otf::encode::Writer as mlkem_otf::encode::Sink>::put
+    3 line 0 in core::ptr::write_volatile::<i16>
+    1 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Compare>
+    2 line 0 in mlkem_otf::encode::compress_encode::<mlkem_otf::encode::Writer>
+    1 line 0 in mlkem_otf::encode::decode_decompress
+    2 line 0 in mlkem_otf::ntt::ntt
+    6 ntt.rs: *a = a.wrapping_add(t);
+    4 sample.rs: if d < Q && n < N {
+    2 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    6 sha3-0.12.0/src/utils.rs:13
+    2 shake-0.1.0/src/lib.rs:82
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    2 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+# cortex-m3 opt-level s-overflow
+    1 core/src/iter/adapters/skip.rs:41
+   13 core/src/iter/adapters/zip.rs:300
+   15 core/src/iter/range.rs:1100
+    1 core/src/ops/index_range.rs:131
+    1 core/src/option.rs:2138
+   74 core/src/slice/iter/macros.rs:180
+    1 core/src/slice/iter/macros.rs:25
+    7 core/src/slice/mod.rs:2163
+    4 core/src/slice/mod.rs:2202
+    1 encode.rs: *b = byte;
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+    1 encode.rs: while bits < d {
+    4 encode.rs: while bits >= 8 {
+    1 kpke.rs: for (k, (v, a)) in (0..8).zip(v.iter().zip(a)) {
+    2 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <[u8]>::split_at_checked
+    1 line 0 in <core::iter::adapters::skip::Skip<core::slice::iter::Iter<i16>> as core::iter::traits::iterator::Iterator>::next
+    1 line 0 in <sponge_cursor::SpongeCursor<72>>::absorb_u64_le::<25>
+    1 line 0 in mlkem_otf::ntt::ntt
+    1 line 0 in sponge_cursor::u64_le_utils::absorb_full::<25, 72>
+    1 line 0 in sponge_cursor::u64_le_utils::absorb_partial::<25, 168>
+    1 ntt.rs: while len <= N / 2 {
+    2 sample.rs: if d < Q && n < N {
+    1 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: let mut buf = [0; 24];
+    1 sample.rs: while n < N {
+    4 sha3-0.12.0/src/utils.rs:13
+    4 shake-0.1.0/src/lib.rs:82
+    2 sponge-cursor-0.1.0/src/lib.rs:103
+    2 sponge-cursor-0.1.0/src/lib.rs:109
+    1 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+# cortex-m3 opt-level s-split
+    1 cmov-0.5.4/src/slice.rs:24
+    6 core/src/cmp.rs:1090
+    1 core/src/iter/adapters/skip.rs:41
+   20 core/src/iter/adapters/zip.rs:300
+   13 core/src/iter/range.rs:1100
+    1 core/src/ops/index_range.rs:131
+    1 core/src/option.rs:2138
+    1 core/src/result.rs:1721
+    4 core/src/slice/iter.rs:1903
+    2 core/src/slice/iter.rs:2059
+   60 core/src/slice/iter/macros.rs:180
+    4 core/src/slice/iter/macros.rs:25
+    8 core/src/slice/mod.rs:2163
+    4 core/src/slice/mod.rs:2202
+    1 core/src/slice/mod.rs:5597
+    1 ctutils-0.4.8/src/choice.rs:417
+    2 encode.rs: *b = byte;
+    2 encode.rs: self.diff | u8::from(self.expected.len() != 0)
+    1 encode.rs: sink.put((b >> 4) as u8);
+    2 encode.rs: while bits < d {
+    4 encode.rs: while bits >= 8 {
+    1 guard/src/main.rs: if let Ok(own) = dk.bind(black_box(ek)) {
+    1 guard/src/main.rs: if let Ok(peer) = EncapsulationKey::new(black_box(ek)) {
+    2 kpke.rs: for (v, byte) in v.0.chunks_exact_mut(8).zip(m) {
+    2 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <[i16]>::split_at_checked
+    1 line 0 in <[u8]>::split_at_unchecked
+    1 line 0 in <core::iter::adapters::skip::Skip<core::slice::iter::Iter<i16>> as core::iter::traits::iterator::Iterator>::next
+    1 line 0 in <core::iter::adapters::zip::Zip<core::ops::range::Range<u32>, core::iter::adapters::zip::Zip<core::slice::iter::Iter<i16>, core::slice::iter::Iter<i16>>> as core::iter::adapters::zip::ZipImpl<core::ops::range::Range<u32>, core::iter::adapters::zip::Zip<core::slice::iter::Iter<i16>, core::slice::iter::Iter<i16>>>>::next
+    1 line 0 in <core::ops::index_range::IndexRange>::next_unchecked
+    3 line 0 in core::ptr::write_volatile::<i16>
+    1 line 0 in mlkem_otf::kpke::v_poly::<mlkem_otf::params::MlKem768>
+    1 line 0 in mlkem_otf::ntt::ntt
+    1 line 0 in mlkem_otf::sample::cbd2
+    1 ntt.rs: while len <= N / 2 {
+    1 sample.rs: [b0, b1, b2, b3] => u32::from_le_bytes([b0, b1, b2, b3]),
+    1 sample.rs: for (r, w) in r.0.chunks_exact_mut(8).zip(buf.chunks_exact(4)) {
+    1 sample.rs: if d < Q && n < N {
+    1 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    2 shake-0.1.0/src/lib.rs:82
+    1 sponge-cursor-0.1.0/src/lib.rs:103
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    1 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+# cortex-m0 opt-level 2
+    1 core/src/intrinsics/mod.rs:478
+   15 core/src/iter/adapters/zip.rs:300
+   19 core/src/iter/range.rs:1100
+    1 core/src/option.rs:2137
+  104 core/src/slice/iter/macros.rs:180
+    1 core/src/slice/iter/macros.rs:25
+   11 core/src/slice/mod.rs:2163
+    4 core/src/slice/mod.rs:2202
+   10 encode.rs: while bits >= 8 {
+   15 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <[u8]>::split_at_checked
+    1 line 0 in <[u8]>::split_at_mut_unchecked
+    1 line 0 in <core::ops::range::Range<u8> as core::iter::range::RangeIteratorImpl>::spec_next
+    1 line 0 in <mlkem_otf::EncapsulationKey>::new
+    1 line 0 in mlkem_otf::ntt::ntt
+    1 line 0 in mlkem_otf::sample::sample_ntt_acc
+    1 ntt.rs: while len <= N / 2 {
+    3 sample.rs: if d < Q && n < N {
+    2 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    1 sponge-cursor-0.1.0/src/lib.rs:103
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    1 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+# cortex-m0 opt-level 3
+   23 core/src/iter/adapters/zip.rs:300
+   23 core/src/iter/range.rs:1100
+  142 core/src/slice/iter/macros.rs:180
+   18 core/src/slice/iter/macros.rs:25
+   15 core/src/slice/mod.rs:2163
+    3 core/src/slice/mod.rs:2202
+   12 encode.rs: while bits >= 8 {
+   15 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    4 line 0 in <[i16]>::split_at_mut_checked
+    1 line 0 in <[u8]>::split_at_checked
+    1 line 0 in <[u8]>::split_at_mut_unchecked
+    5 line 0 in <core::iter::adapters::zip::Zip<core::slice::iter::IterMut<i16>, core::slice::iter::IterMut<i16>> as core::iter::adapters::zip::ZipImpl<core::slice::iter::IterMut<i16>, core::slice::iter::IterMut<i16>>>::next
+    1 line 0 in <core::slice::iter::Iter<i16> as core::iter::traits::double_ended::DoubleEndedIterator>::next_back
+    1 line 0 in <mlkem_otf::EncapsulationKey>::new
+    1 line 0 in mlkem_otf::sample::sample_ntt_acc
+    3 sample.rs: if d < Q && n < N {
+    2 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    2 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+# cortex-m0 opt-level s
+    1 core/src/iter/adapters/skip.rs:41
+   14 core/src/iter/adapters/zip.rs:300
+   16 core/src/iter/range.rs:1100
+    1 core/src/ops/index_range.rs:131
+   75 core/src/slice/iter/macros.rs:180
+    1 core/src/slice/iter/macros.rs:25
+    7 core/src/slice/mod.rs:2163
+    4 core/src/slice/mod.rs:2202
+    1 encode.rs: while bits < d {
+    4 encode.rs: while bits >= 8 {
+    2 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <[u8]>::split_at_checked
+    1 line 0 in <core::iter::adapters::skip::Skip<core::slice::iter::Iter<i16>> as core::iter::traits::iterator::Iterator>::next
+    1 line 0 in <core::ptr::non_null::NonNull<i16> as core::cmp::PartialEq>::eq
+    1 line 0 in <sponge_cursor::SpongeCursor<168>>::squeeze_inner_u64_le::<25>
+    1 line 0 in mlkem_otf::ntt::ntt
+    1 ntt.rs: while len <= N / 2 {
+    2 sample.rs: if d < Q && n < N {
+    1 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    2 sponge-cursor-0.1.0/src/lib.rs:103
+    2 sponge-cursor-0.1.0/src/lib.rs:109
+    2 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+# cortex-m0 opt-level z
+   10 core/src/cmp.rs:1090
+    1 core/src/iter/adapters/skip.rs:41
+   12 core/src/iter/adapters/zip.rs:300
+   11 core/src/iter/range.rs:1100
+    1 core/src/num/uint_macros.rs:3788
+    1 core/src/num/uint_macros.rs:3790
+    1 core/src/ops/index_range.rs:131
+    1 core/src/option.rs:1541
+    1 core/src/option.rs:2869
+    1 core/src/result.rs:1182
+    3 core/src/slice/index.rs:408
+    1 core/src/slice/index.rs:422
+    1 core/src/slice/index.rs:544
+    1 core/src/slice/index.rs:557
+    1 core/src/slice/iter.rs:1693
+    1 core/src/slice/iter.rs:1903
+   26 core/src/slice/iter/macros.rs:180
+    1 core/src/slice/iter/macros.rs:25
+    1 core/src/slice/mod.rs:1290
+    7 core/src/slice/mod.rs:2163
+    3 core/src/slice/mod.rs:2202
+    1 core/src/slice/mod.rs:5597
+    1 encode.rs: [c0, c1, c2] => {
+    1 encode.rs: while bits < d {
+    2 encode.rs: while bits >= 8 {
+    1 hybrid-array-0.4.15/src/from_fn.rs:49
+    2 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: for (a, b) in decode12(t) {
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <core::iter::adapters::skip::Skip<core::slice::iter::Iter<i16>> as core::iter::traits::iterator::Iterator>::next
+    1 ntt.rs: while len <= N / 2 {
+    1 ntt.rs: while len >= 2 {
+    1 ntt.rs:117: for block in r.0.chunks_exact_mut(2 * len) {
+    1 ntt.rs:95: for block in r.0.chunks_exact_mut(2 * len) {
+    2 sample.rs: if d < Q && n < N {
+    1 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    1 sponge-cursor-0.1.0/src/lib.rs:103
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    1 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+    1 sponge-cursor-0.1.0/src/lib.rs:81
+    3 sponge-cursor-0.1.0/src/u64_le_utils.rs:44
+# cortex-m0 opt-level 2-overflow
+    1 core/src/intrinsics/mod.rs:478
+   15 core/src/iter/adapters/zip.rs:300
+   19 core/src/iter/range.rs:1100
+    1 core/src/option.rs:2137
+  104 core/src/slice/iter/macros.rs:180
+    1 core/src/slice/iter/macros.rs:25
+   11 core/src/slice/mod.rs:2163
+    4 core/src/slice/mod.rs:2202
+   10 encode.rs: while bits >= 8 {
+    1 kpke.rs: for (k, (v, a)) in (0..8).zip(v.iter().zip(a)) {
+   15 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <[u8]>::split_at_checked
+    1 line 0 in <[u8]>::split_at_mut_unchecked
+    1 line 0 in <core::ops::range::Range<u8> as core::iter::range::RangeIteratorImpl>::spec_next
+    1 line 0 in <mlkem_otf::EncapsulationKey>::new
+    1 line 0 in mlkem_otf::ntt::ntt
+    1 line 0 in mlkem_otf::sample::sample_ntt_acc
+    1 ntt.rs: while len <= N / 2 {
+    3 sample.rs: if d < Q && n < N {
+    2 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    1 sponge-cursor-0.1.0/src/lib.rs:103
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    1 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+# cortex-m0 opt-level 3-overflow
+   25 core/src/iter/adapters/zip.rs:300
+   23 core/src/iter/range.rs:1100
+  142 core/src/slice/iter/macros.rs:180
+   18 core/src/slice/iter/macros.rs:25
+   15 core/src/slice/mod.rs:2163
+    3 core/src/slice/mod.rs:2202
+   12 encode.rs: while bits >= 8 {
+    2 kpke.rs: for (k, (v, a)) in (0..8).zip(v.iter().zip(a)) {
+   15 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    4 line 0 in <[i16]>::split_at_mut_checked
+    1 line 0 in <[u8]>::split_at_checked
+    1 line 0 in <[u8]>::split_at_mut_unchecked
+    5 line 0 in <core::iter::adapters::zip::Zip<core::slice::iter::IterMut<i16>, core::slice::iter::IterMut<i16>> as core::iter::adapters::zip::ZipImpl<core::slice::iter::IterMut<i16>, core::slice::iter::IterMut<i16>>>::next
+    1 line 0 in <core::slice::iter::Iter<i16> as core::iter::traits::double_ended::DoubleEndedIterator>::next_back
+    1 line 0 in <mlkem_otf::EncapsulationKey>::new
+    1 line 0 in mlkem_otf::sample::sample_ntt_acc
+    3 sample.rs: if d < Q && n < N {
+    2 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    2 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+# cortex-m0 opt-level s-overflow
+    1 core/src/iter/adapters/skip.rs:41
+   14 core/src/iter/adapters/zip.rs:300
+   16 core/src/iter/range.rs:1100
+    1 core/src/ops/index_range.rs:131
+   75 core/src/slice/iter/macros.rs:180
+    1 core/src/slice/iter/macros.rs:25
+    7 core/src/slice/mod.rs:2163
+    4 core/src/slice/mod.rs:2202
+    1 encode.rs: while bits < d {
+    4 encode.rs: while bits >= 8 {
+    1 kpke.rs: for (k, (v, a)) in (0..8).zip(v.iter().zip(a)) {
+    2 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <[u8]>::split_at_checked
+    1 line 0 in <core::iter::adapters::skip::Skip<core::slice::iter::Iter<i16>> as core::iter::traits::iterator::Iterator>::next
+    1 line 0 in <core::ptr::non_null::NonNull<i16> as core::cmp::PartialEq>::eq
+    1 line 0 in <sponge_cursor::SpongeCursor<168>>::squeeze_inner_u64_le::<25>
+    1 line 0 in mlkem_otf::ntt::ntt
+    1 ntt.rs: while len <= N / 2 {
+    2 sample.rs: if d < Q && n < N {
+    1 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    2 sponge-cursor-0.1.0/src/lib.rs:103
+    2 sponge-cursor-0.1.0/src/lib.rs:109
+    2 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220
+# cortex-m0 opt-level s-split
+    1 cmov-0.5.4/src/slice.rs:24
+    6 core/src/cmp.rs:1090
+    1 core/src/iter/adapters/skip.rs:41
+   19 core/src/iter/adapters/zip.rs:300
+   14 core/src/iter/range.rs:1100
+    1 core/src/ops/index_range.rs:131
+    1 core/src/result.rs:1721
+    4 core/src/slice/iter.rs:1903
+    2 core/src/slice/iter.rs:2059
+   64 core/src/slice/iter/macros.rs:180
+    4 core/src/slice/iter/macros.rs:25
+    9 core/src/slice/mod.rs:2163
+    4 core/src/slice/mod.rs:2202
+    1 core/src/slice/mod.rs:5597
+    1 encode.rs: while bits < d {
+    4 encode.rs: while bits >= 8 {
+    1 guard/src/main.rs: if let Ok(own) = dk.bind(black_box(ek)) {
+    1 guard/src/main.rs: if let Ok(peer) = EncapsulationKey::new(black_box(ek)) {
+    2 kpke.rs: for (v, byte) in v.0.chunks_exact_mut(8).zip(m) {
+    2 lib.rs: bad |= u8::from(a >= Q) | u8::from(b >= Q);
+    1 lib.rs: if Choice::from_u8_eq(cmp.diff(), 0).to_bool() {
+    1 lib.rs: if bad == 0 {
+    1 line 0 in <core::iter::adapters::skip::Skip<core::slice::iter::Iter<i16>> as core::iter::traits::iterator::Iterator>::next
+    3 line 0 in <core::ptr::non_null::NonNull<i16> as core::cmp::PartialEq>::eq
+    1 line 0 in <core::slice::iter::Iter<&[u8]> as core::iter::traits::iterator::Iterator>::next
+    2 line 0 in mlkem_otf::kpke::decrypt::<mlkem_otf::params::MlKem768, mlkem_otf::kpke::FromSigma>
+    1 line 0 in mlkem_otf::kpke::v_poly::<mlkem_otf::params::MlKem768>
+    1 line 0 in mlkem_otf::ntt::ntt
+    1 ntt.rs: while len <= N / 2 {
+    1 sample.rs: [b0, b1, b2, b3] => u32::from_le_bytes([b0, b1, b2, b3]),
+    1 sample.rs: for (r, w) in r.0.chunks_exact_mut(8).zip(buf.chunks_exact(4)) {
+    2 sample.rs: if d < Q && n < N {
+    1 sample.rs: if n.is_multiple_of(2) {
+    1 sample.rs: while n < N {
+    1 sponge-cursor-0.1.0/src/lib.rs:103
+    1 sponge-cursor-0.1.0/src/lib.rs:109
+    1 sponge-cursor-0.1.0/src/lib.rs:131
+    1 sponge-cursor-0.1.0/src/lib.rs:194
+    1 sponge-cursor-0.1.0/src/lib.rs:198
+    1 sponge-cursor-0.1.0/src/lib.rs:220

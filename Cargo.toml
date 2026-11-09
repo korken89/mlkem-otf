@@ -1,0 +1,46 @@
+[package]
+name = "mlkem-otf"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.87"
+description = "Small-stack ML-KEM-768 (FIPS 203) with streaming matrix expansion and in-place ciphertexts"
+license = "MIT OR Apache-2.0"
+publish = false
+
+[features]
+defmt = ["dep:defmt"]
+hazmat = []
+
+[dependencies]
+# ctutils over subtle: CtAssign on arrays selects the shared key with cmov, and the RustCrypto
+# ml-kem crate builds on it too
+ctutils = "0.4"
+defmt = { version = "1", optional = true }
+rand_core = "0.10"
+sha3 = { version = "0.12", default-features = false, features = ["zeroize"] }
+shake = { version = "0.1", default-features = false, features = ["zeroize"] }
+thiserror = { version = "2", default-features = false }
+zeroize = { version = "1", default-features = false, features = ["derive"] }
+
+[dev-dependencies]
+chacha20 = { version = "0.10", default-features = false, features = ["rng"] }
+hex = { version = "0.4", features = ["serde"] }
+ml-kem = { version = "0.3", features = ["hazmat"] }
+# The tests use the deterministic API
+mlkem-otf = { path = ".", features = ["hazmat"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+static_assertions = "1"
+static_cell = "2"
+
+[lints.rust]
+missing_docs = "warn"
+unsafe_code = "forbid"
+
+[lints.clippy]
+undocumented_unsafe_blocks = "warn"
+manual_let_else = "warn"
+
+# The tests run in release, so keep i16 and i32 overflows visible there.
+[profile.release]
+overflow-checks = true
